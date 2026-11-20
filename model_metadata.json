@@ -1,0 +1,75 @@
+{
+    "project_title": "Used Cars Market Price Regression",
+    "task_type": "regression",
+    "target_column": "selling_price",
+    "best_model_name": "Ridge",
+    "numeric_features": [
+        "year",
+        "km_driven",
+        "engine_cc",
+        "max_power_bhp"
+    ],
+    "categorical_features": [
+        "brand",
+        "fuel",
+        "transmission",
+        "owner"
+    ],
+    "feature_ranges": {
+        "year": {
+            "min": 2010,
+            "max": 2025,
+            "default": 2018,
+            "dtype": "int"
+        },
+        "km_driven": {
+            "min": 5000,
+            "max": 220000,
+            "default": 113840,
+            "dtype": "int"
+        },
+        "engine_cc": {
+            "min": 1000,
+            "max": 3500,
+            "default": 2221,
+            "dtype": "int"
+        },
+        "max_power_bhp": {
+            "min": 65.0,
+            "max": 320.0,
+            "default": 189.93,
+            "dtype": "float"
+        }
+    },
+    "categorical_options": {
+        "brand": [
+            "Toyota",
+            "Hyundai",
+            "Kia",
+            "Nissan",
+            "BMW",
+            "Mercedes",
+            "Renault"
+        ],
+        "fuel": [
+            "Petrol",
+            "Diesel",
+            "Hybrid",
+            "Electric"
+        ],
+        "transmission": [
+            "Automatic",
+            "Manual"
+        ],
+        "owner": [
+            "First Owner",
+            "Second Owner",
+            "Third Owner"
+        ]
+    },
+    "metrics": {
+        "r2": 0.8908,
+        "mae": 73219.37,
+        "rmse": 95051.14
+    }
+}
